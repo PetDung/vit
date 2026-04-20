@@ -1,0 +1,33 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://180.93.52.142:3007
+      - GOOGLE_CLIENT_EMAIL=${GOOGLE_CLIENT_EMAIL}
+      - GOOGLE_PRIVATE_KEY=${GOOGLE_PRIVATE_KEY}
+      - GA4_PROPERTY_ID=${GA4_PROPERTY_ID}
+    env_file:
+      - .env.local
+    depends_on:
+      - api
+    networks:
+      - app-network
+
+  api:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "3002:3002"
+    command: sh -c "npm install -g json-server && json-server --watch db.json --port 3002 --host 0.0.0.0"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

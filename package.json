@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
-    "api": "json-server --watch db.json --port 3002 --host 0.0.0.0",
+    "api": "json-server --watch db.json --port 3007 --host 0.0.0.0",
     "lint": "eslint .",
     "start": "next start"
   },
