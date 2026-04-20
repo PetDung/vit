@@ -1,5 +1,4 @@
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3002"
-
+const API = "http://180.93.52.142:3007"
 export interface Partner {
   name: string
   src: string

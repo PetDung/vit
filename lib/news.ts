@@ -17,8 +17,7 @@ export function findNewsBySlug(news: NewsArticle[], slug: string): NewsArticle |
   return news.find((p) => toSlug(p.title, p.id) === slug) || news.find((p) => slug.endsWith(p.id));
 }
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3002"
-
+const API = "http://180.93.52.142:3007"
 export async function fetchNews(): Promise<NewsArticle[]> {
   try {
     const res = await fetch(`${API}/news`, { cache: "no-store" })

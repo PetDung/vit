@@ -1,4 +1,4 @@
-const API = process.env.NEXT_PUBLIC_API_URL || "http://180.93.52.142:3007"
+const API = "http://180.93.52.142:3007"
 
 /* ─── Generic CRUD ─── */
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
