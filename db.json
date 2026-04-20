@@ -1,0 +1,342 @@
+{
+  "products": [
+    {
+      "name": "Good Oil",
+      "code": "good-oil",
+      "images": [
+        "https://res.cloudinary.com/ddnasugap/image/upload/v1772440302/marshell/jpiqju2s9ohww27y0ey0.png",
+        "https://res.cloudinary.com/ddnasugap/image/upload/v1773801559/marshell/koxhejyrbwtbjjvypcyv.jpg"
+      ],
+      "description": "<p>mô tả ngắn </p>",
+      "content": "<p></p><p></p>",
+      "image": "https://res.cloudinary.com/ddnasugap/image/upload/v1772440302/marshell/jpiqju2s9ohww27y0ey0.png",
+      "id": "sp-1772435144583"
+    },
+    {
+      "id": "sp-1772440396635",
+      "name": "BEN MX 3 API CI-4/SL",
+      "description": "",
+      "content": "<p><strong>Miêu tả/ Description.</strong></p><ul><li><p>BEN MX3 &nbsp;là nhóm dầu động cơ đa cấp chất lượng cao , được sử dụng hệ công thức đặc biệt. Sử dụng cho động cơ Diezel và động cơ xăng.</p></li><li><p>Sản phẩm được sản xuất bởi 100% nguyên liệu nhập khẩu.</p></li></ul><p><strong>Ứng dụng/ Application.</strong></p><ul><li><p>BEN MX3 Phù hợp với mọi động cơ, sử dụng nhiên liệu Diesel - Xăng, tốc độ cao, tải trọng nặng, có Turbo tăng áp. Đạt tiêu chuẩn Châu Âu, Nhật Bản. Sản phẩm vượt trội với các dòng xe khai thác mỏ, xe công trình, thiết bị hàng hải, máy phát điện, xe cont Mỹ, xe khách đời cao.</p></li></ul><p><strong>Cas.Ultra được phân loại tiêu chuẩn như sau:</strong></p><table class=\"tiptap-table\" style=\"min-width: 75px;\"><colgroup><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\"><p>CH-4/CF-4/ SL</p></td><td colspan=\"1\" rowspan=\"1\"><p>&nbsp;</p></td><td colspan=\"1\" rowspan=\"1\"><p>&nbsp;</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>ACEA</p></td><td colspan=\"1\" rowspan=\"1\"><p>CUMIN:</p></td><td colspan=\"1\" rowspan=\"1\"><p>KOBUTA</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>CAT :</p></td><td colspan=\"1\" rowspan=\"1\"><p>MAN:</p></td><td colspan=\"1\" rowspan=\"1\"><p>VOLVO:</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>MERCEDES &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</p></td><td colspan=\"1\" rowspan=\"1\"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</p></td><td colspan=\"1\" rowspan=\"1\"><p>FORD:</p></td></tr></tbody></table><p><strong>Ưu điểm/ Advantages.</strong></p><table class=\"tiptap-table\" style=\"min-width: 50px;\"><colgroup><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\"><ul><li><p>Chỉ số độ nhớt cao.</p></li><li><p>Đảm bảo bôi trơn suốt chu kỳ.</p></li><li><p>Độ bền oxy hóa vượt trội</p></li><li><p>Tiết kiệm thời gian bảo trì.</p></li></ul></td><td colspan=\"1\" rowspan=\"1\"><ul><li><p>Độ bền nhiệt cao</p></li><li><p>Chống mài mòn, kẹt xước</p></li><li><p>Khả năng tẩy rửa cao</p></li><li><p>Tiết kiệm nhiên liệu.</p></li></ul></td></tr></tbody></table><p><strong>Đặc tính kỹ thuật/ Typical Characteristics</strong></p><table class=\"tiptap-table\" style=\"min-width: 75px;\"><colgroup><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\"><h1 style=\"text-align: center;\"><strong>BEN MX3</strong></h1></td><td colspan=\"1\" rowspan=\"1\"><p>15W-40</p></td><td colspan=\"1\" rowspan=\"1\"><p>20W-50</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Phân loại chất lượng/ Viscosity Grade</p></td><td colspan=\"2\" rowspan=\"1\"><p>CI-4../SL</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Khối lượng riêng @ 20°C/68°F/Density,min</p></td><td colspan=\"1\" rowspan=\"1\"><p>0.8600</p></td><td colspan=\"1\" rowspan=\"1\"><p>0.8700</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Độ nhớt động học ở 100°C/212°F,cSt/ Kinematic Viscosity , min</p></td><td colspan=\"1\" rowspan=\"1\"><p>12.5-16.3</p></td><td colspan=\"1\" rowspan=\"1\"><p>16.3-21.5</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Chỉ số độ nhớt, min/ Viscosity Index, min</p></td><td colspan=\"1\" rowspan=\"1\"><p>120</p></td><td colspan=\"1\" rowspan=\"1\"><p>115</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Độ nhớt biểu kiến ở nhiệt độ cao và tốc độ trượt cắt cao (HTHS),min</p></td><td colspan=\"1\" rowspan=\"1\"><p>3,5</p></td><td colspan=\"1\" rowspan=\"1\"><p>3,5</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Chỉ số kiềm tổng,(min) mgKOH/g/ Total base numer , min</p></td><td colspan=\"1\" rowspan=\"1\"><p>7,0</p></td><td colspan=\"1\" rowspan=\"1\"><p>7,0</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Nhiệt độ chớp cháy cốc hở, °C, min/COC, max</p></td><td colspan=\"1\" rowspan=\"1\"><p>230</p></td><td colspan=\"1\" rowspan=\"1\"><p>240</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Điểm rót chảy °C, max/ Pour Point, min</p></td><td colspan=\"1\" rowspan=\"1\"><p>-15</p></td><td colspan=\"1\" rowspan=\"1\"><p>-15</p></td></tr></tbody></table><p>Marshell là một nhãn hiệu của Caspi Lubricant Viet Nam</p>",
+      "specs": [],
+      "benefits": [],
+      "applications": [],
+      "image": "https://res.cloudinary.com/ddnasugap/image/upload/v1772440437/marshell/dpadsxbkegun0yvrxhqa.jpg",
+      "code": "BEN-MX 3-API-CI-4/SL"
+    },
+    {
+      "id": "sp-1772440774781",
+      "name": "Lesturbo API CF-4/SG",
+      "description": "",
+      "content": "<p><strong>Miêu tả/ Description.</strong></p><ul><li><p>LESTURBO &nbsp;là nhóm dầu động cơ đa cấp chất lượng cao , được sử dụng hệ công thức đặc biệt. Sử dụng cho động cơ Diezel và động cơ xăng.</p></li><li><p>Sản phẩm được sản xuất bởi 100% nguyên liệu, nhập khẩu.</p></li></ul><p><strong>Ứng dụng/ Application.</strong></p><ul><li><p>LESTURBO Thích hợp với mọi động cơ, sử dụng nhiên liệu Diesel - Xăng, tốc độ cao, tải trọng nặng, có Turbo tăng áp. Sản phẩm vượt trội với các dòng xe tải ben, xà lan, tàu cá, tàu khai thác, các động cơ đời trước.</p></li><li><p>LESTURBO được phân loại tiêu chuẩn như sau:</p></li></ul><table class=\"tiptap-table\" style=\"min-width: 75px;\"><colgroup><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\"><ul><li><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;CF-4/ SG</p></li></ul></td><td colspan=\"1\" rowspan=\"1\"><p>&nbsp;</p></td><td colspan=\"1\" rowspan=\"1\"><p>&nbsp;</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><ul><li><p>ACEA</p></li></ul></td><td colspan=\"1\" rowspan=\"1\"><ul><li><p>CUMIN:</p></li></ul></td><td colspan=\"1\" rowspan=\"1\"><ul><li><p>KOBUTA</p></li></ul></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><ul><li><p>CAT :</p></li></ul></td><td colspan=\"1\" rowspan=\"1\"><ul><li><p>MAN:</p></li></ul></td><td colspan=\"1\" rowspan=\"1\"><ul><li><p>VOLVO:</p></li></ul></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><ul><li><p>MERCEDES &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</p></li></ul></td><td colspan=\"1\" rowspan=\"1\"><ul><li><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</p></li></ul></td><td colspan=\"1\" rowspan=\"1\"><ul><li><p>FORD:</p></li></ul></td></tr></tbody></table><p><strong>Ưu điểm/ Advantages.</strong></p><table class=\"tiptap-table\" style=\"min-width: 50px;\"><colgroup><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\"><ul><li><p>Chỉ số độ nhớt cao.</p></li><li><p>Đảm bảo bôi trơn suốt chu kỳ</p></li><li><p>Độ bền oxy hóa vượt trội</p></li><li><p>Tiết kiệm thời gian bảo trì.</p></li></ul></td><td colspan=\"1\" rowspan=\"1\"><ul><li><p>Chống mài mòn, kẹt xước</p></li><li><p>Khả năng tẩy rửa cao</p></li><li><p>Tiết kiệm nhiên liệu.</p></li></ul></td></tr></tbody></table><p><strong>Đặc tính kỹ thuật/ Typical Characteristics</strong></p><table class=\"tiptap-table\" style=\"min-width: 75px;\"><colgroup><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\"><h1><strong>LESTURBO</strong></h1></td><td colspan=\"1\" rowspan=\"1\"><p>15W-40</p></td><td colspan=\"1\" rowspan=\"1\"><p>20W-50</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Phân loại chất lượng/ Viscosity Grade</p></td><td colspan=\"2\" rowspan=\"1\"><p>CF-4../SG</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Khối lượng riêng @ 20°C/68°F/Density,min</p></td><td colspan=\"1\" rowspan=\"1\"><p>0.868</p></td><td colspan=\"1\" rowspan=\"1\"><p>0.8700</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Độ nhớt động học ở 100°C/212°F,cSt/ Kinematic Viscosity</p></td><td colspan=\"1\" rowspan=\"1\"><p>12,5-16,3</p></td><td colspan=\"1\" rowspan=\"1\"><p>16,3-21,5</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Độ nhớt biểu kiến ở nhiệt độ cao và tốc độ trượt cắt cao (HTHS),min</p></td><td colspan=\"1\" rowspan=\"1\"><p>3,5</p></td><td colspan=\"1\" rowspan=\"1\"><p>3,5</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Chỉ số độ nhớt, min/ Viscosity Index, min</p></td><td colspan=\"1\" rowspan=\"1\"><p>115</p></td><td colspan=\"1\" rowspan=\"1\"><p>110</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Chỉ số kiềm tổng,(min) mgKOH/g/ Total base numer , min</p></td><td colspan=\"1\" rowspan=\"1\"><p>5,0</p></td><td colspan=\"1\" rowspan=\"1\"><p>5,0</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Nhiệt độ chớp cháy cốc hở, °C, min/COC, min</p></td><td colspan=\"1\" rowspan=\"1\"><p>230</p></td><td colspan=\"1\" rowspan=\"1\"><p>230</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Điểm rót chảy °C, max/ Pour Point, max</p></td><td colspan=\"1\" rowspan=\"1\"><p>-15</p></td><td colspan=\"1\" rowspan=\"1\"><p>-15</p></td></tr></tbody></table><p>Marshell là một nhãn hiệu của Caspi Lubricant Viet Nam</p>",
+      "specs": [],
+      "benefits": [],
+      "applications": [],
+      "image": "https://res.cloudinary.com/ddnasugap/image/upload/v1772440797/marshell/fggxl5f7hntgzaj6jw44.jpg",
+      "code": "Lesturbo-API-CF-4/SG"
+    },
+    {
+      "id": "sp-1772440859260",
+      "name": "Hyrelia HLP",
+      "description": "",
+      "content": "<p><strong>Miêu tả/ Description.</strong></p><ul><li><p>Hyrelia HLP là nhóm dầu thủy lực, chứa một hệ phụ gia ổn định chịu lực, giúp duy trì các đặc tính cơ bản. Chống mài mòn chất lượng cao, ổn định độ nhớt, chống oxy hóa và khả năng hoạt động ở các phạm vi nhiệt rộng.</p></li><li><p>Sản phẩm được sản xuất bởi 100% nguyên liệu, nhập khẩu</p></li></ul><p><strong>Ứng dụng/ Application.</strong></p><ul><li><p>Hyrelia HLP là sản phẩm thích hợp với các thiết bị ngoài trời. Có khả năng hoạt động trong phạm vi nhiệt rộng, nhiệt độ cao, liên tục và thay đổi nhiệt độ đột ngột.</p></li><li><p>Các thiết bị điều khiển, sản xuất có kết cấu hệ thống thủy lực.</p></li><li><p>Sobil HLP &nbsp;được phân loại tiêu chuẩn như sau:</p></li><li><p>ISO : HM</p></li><li><p>DIN 51524 Part 2</p></li></ul><p><strong>Ưu điểm/ Advantages.</strong></p><table class=\"tiptap-table\" style=\"min-width: 50px;\"><colgroup><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\"><ul><li><p>Chỉ số độ nhớt cao.</p></li><li><p>Ổn định độ nhớt.</p></li><li><p>Độ bền oxy hóa vượt trội</p></li><li><p>Tiết kiệm thời gian bảo trì.</p></li></ul></td><td colspan=\"1\" rowspan=\"1\"><ul><li><p>Chống kẹt xước</p></li><li><p>Khả năng Chống trượt</p></li><li><p>Khả năng tách nước, tách khí.</p></li></ul></td></tr></tbody></table><p><strong>Đặc tính kỹ thuật/ Typical Characteristics</strong></p><table class=\"tiptap-table\" style=\"min-width: 75px;\"><colgroup><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"><col style=\"min-width: 25px;\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\"><h1 style=\"text-align: center;\"><strong>HYRELIA HLP</strong></h1></td><td colspan=\"1\" rowspan=\"1\"><p>46</p></td><td colspan=\"1\" rowspan=\"1\"><p>68</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Phân loại ISO/ Viscosity Grade</p></td><td colspan=\"1\" rowspan=\"1\"><p>HM-46</p></td><td colspan=\"1\" rowspan=\"1\"><p>HM-68</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Khối lượng riêng @ 20°C/68°F/Density,min</p></td><td colspan=\"1\" rowspan=\"1\"><p>0.8600</p></td><td colspan=\"1\" rowspan=\"1\"><p>0.8600</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Độ nhớt động học ở 40°C/104°F,cSt/ Kinematic Viscosity</p></td><td colspan=\"1\" rowspan=\"1\"><p>41,4-50,6</p></td><td colspan=\"1\" rowspan=\"1\"><p>61,2-74,8</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Chỉ số độ nhớt, min/ Viscosity Index, min</p></td><td colspan=\"1\" rowspan=\"1\"><p>105</p></td><td colspan=\"1\" rowspan=\"1\"><p>105</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Điểm rót chảy, max, °C / Pour Point, max</p></td><td colspan=\"1\" rowspan=\"1\"><p>-15</p></td><td colspan=\"1\" rowspan=\"1\"><p>-15</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>.Nhiệt độ chớp cháy cốc hở, °C, min/COC, min</p></td><td colspan=\"1\" rowspan=\"1\"><p>220</p></td><td colspan=\"1\" rowspan=\"1\"><p>220</p></td></tr><tr><td colspan=\"1\" rowspan=\"1\"><p>Khả năng tách nước @ 54°C/129°F (41/39/0) Water Separation,max &nbsp;</p></td><td colspan=\"1\" rowspan=\"1\"><p>20</p></td><td colspan=\"1\" rowspan=\"1\"><p>20</p></td></tr></tbody></table><p>Marshell là một nhãn hiệu của Caspi Lubricant Viet Nam</p>",
+      "specs": [],
+      "benefits": [],
+      "applications": [],
+      "image": "https://res.cloudinary.com/ddnasugap/image/upload/v1772440871/marshell/ltypz58dxxsmor3eebqq.jpg",
+      "code": "Hyrelia-HLP"
+    }
+  ],
+  "newsCategories": [
+    {
+      "id": "cat-1772441374082",
+      "name": "Hoạt động doanh nghiệp"
+    },
+    {
+      "id": "cat-1772441383790",
+      "name": "Chương trình khuyến mãi"
+    }
+  ],
+  "news": [
+    {
+      "title": "Thông số quan trọng nhất khi chọn dầu nhớt",
+      "image": "https://res.cloudinary.com/ddnasugap/image/upload/v1772441400/marshell/sgxlxhkxim9mm5ltjtnp.jpg",
+      "date": "08-01-2019",
+      "category": "Hoạt động doanh nghiệp",
+      "featured": false,
+      "published": false,
+      "views": 0,
+      "excerpt": "<p>Dầu nhớt động cơ ôtô và xe máy có hai thông số quan trọng là cấp hiệu năng (còn gọi là phẩm cấp hoặc cấp chất lượng) API và cấp độ nhớt SAE.</p>",
+      "content": "<h2><strong>Dầu nhớt động cơ ôtô và xe máy có hai thông số quan trọng là cấp hiệu năng (còn gọi là phẩm cấp hoặc cấp chất lượng) API và cấp độ nhớt SAE.</strong></h2><p>Cấp hiệu năng API (Viện dầu mỏ Mỹ) dùng để phân loại chất lượng của nhớt động cơ xăng và diesel và bắt đầu được áp dụng rộng rải ở Mỹ và trên thế giới từ những năm 60 của thế kỷ trước. Theo sự phát triển của thiết kế động cơ, trung bình cứ sau khoảng 4-5 năm lại có một các cấp API mới ra đời để đáp ứng yêu cầu bôi trơn của thế hệ động cơ tương ứng.</p><p>Cấp chất lượng của nhớt động cơ xăng được ký hiệu là API: SA, SB, SC… đến cấp mới nhất hiện nay là API SN<em>.</em>&nbsp;Trong đó chữ cái cuối dùng để phân biệt các cấp và được xếp theo bảng chữ cái, chữ cái càng đứng sau thì biểu thị cho phẩm cấp càng cao hơn. Ví dụ phẩm cấp API SN thì cao hơn SM ; SM cao hơn SL.</p><p>Tương tự như vậy, nhớt động cơ diesel được phân thành các cấp API từ CA cho đến CD : CA,&nbsp; CB,&nbsp; CC, API CD. Thời kỳ đầu, dầu nhớt có chức năng chủ yếu là bảo vệ và kéo dài tuổi thọ động cơ. Về sau nhớt còn đảm đương thêm nhiều chức năng khác như giúp động cơ giảm tiêu hao nhiên liệu và hiện nay thì góp phần làm giảm thiểu khí xả độc hại để động cơ đạt các tiêu chuẩn khí xả như Euro 3, 4 hoặc 5.</p><p>Các cấp hiệu năng API mới nhất hiện nay như API SN hay API CJ-4 được đánh giá theo các chỉ tiêu như khả năng bảo vệ động cơ (tính năng chống cặn bám, chống mài mòn…), tiết kiệm nhiên liệu (độ nhớt thấp, đa cấp), kéo dài định kỳ sử dụng nhớt và phin lọc (chống ô-xy hóa, phân tán cặn), bảo vệ thiết bị xử lý khí xả. API CJ-4 là cấp cao nhất hiện nay, trong đó chữ cái cuối biểu thị cho phẩm cấp và số 4 biểu thị cho loại nhớt dành cho động cơ 4 thì.</p><p>Tiêu chuẩn này do Viện Dầu mỏ Mỹ xác định nên là quy trình nghiêm ngặt và tốn kém. Nhà sản xuất phải trả chi phí từ vài chục ngàn đến vài trăm ngàn đô-la tùy thuộc vào cấp API định đăng ký. Đầu tiên hãng nộp hồ sơ, mẫu dầu và chi phí. Sau đó các mẫu thử nghiệm trên động cơ và xét nghiệm tại phòng thí nghiệm của nhà chế tạo động cơ. Cuối cùng API đánh giá kết quả và cấp chứng chỉ.</p><p>Sau khi API cấp chứng chỉ thì tên sản phẩm được niêm yết trên website của cơ quan này và nhà sản xuất được quyền in nhãn hiệu chất lượng API lên nhãn bao bì sản phẩm. Một số hãng không đủ khả năng để được API cấp chứng chỉ thì tự đánh giá và tự tuyên bố là đạt tiêu chuẩn API, nhưng không được in nhãn hiệu chất lượng API.</p><p>Để đáp ứng yêu cầu của các loại xe hiện nay, cần lựa chọn các cấp chất lượng càng cao càng tốt như API SL ; SM hay SN cho động cơ xăng và API CH-4 hay CI-4 cho động cơ diesel. Các nhà sản xuất thường dùng màu nắp, màu bao bì hay màu nhãn khác nhau cho các sản phẩm có phẩm cấp khác nhau. Tất nhiên có sự chênh lệch về giá cả (nhiều khi là khá lớn) cho các phẩm cấp khác nhau.</p><p><img class=\"rounded-lg max-w-full\" src=\"https://res.cloudinary.com/ddnasugap/image/upload/v1772441459/marshell/fnaadnlfnutatgurv8zj.jpg\" alt=\"Dầu nhớt động cơ ôtô và xe máy có hai thông số quan trọng là cấp hiệu năng\" data-align=\"center\"></p><p><strong>Thông số thứ 2 cần quan tâm khi chọn dầu nhớt là cấp độ nhớt SAE</strong>&nbsp;(Hiệp hội kỹ sư ôtô Mỹ). Cấp độ nhớt SAE biểu thị cho độ đặc-loãng của dầu nhớt như SAE 30, 40 và 50. Số càng lớn có nghĩa là nhớt càng đặc và khả năng bôi trơn càng tốt hơn. Các cấp độ nhớt này được xác định ở 100 độC (là nhiệt độ trung bình của nhớt khi động cơ làm việc) và gọi là độ nhớt đơn cấp ở nhiệt độ cao.</p><p>Dầu nhớt bôi trơn cũng như dầu mỡ ăn có một đặc tính không mong muốn là độ nhớt luôn thay đổi theo nhiệt độ, tức là sẽ đặc lại khi nhiệt độ xuống thấp và ngược lại sẽ loãng ra khi nhiệt độ tăng. Các loại nhớt đơn cấp chỉ bảo đảm là đạt độ nhớt ở nhiệt độ cao như yêu cầu để bôi trơn động cơ. Còn khi nhiệt độ xuống thấp (khi động cơ chưa hoạt động) thì dầu đơn cấp có thể quá đặc gây khó khăn cho việc khởi động và lưu thông dầu nhớt đến các bộ phận động cơ.</p><p>Khắc phục nhược điểm này, các loại dầu nhớt có độ nhớt đa cấp như SAE 10W-30 ; 15W-40 và 20W-50 được phát triển và đưa vào sử dụng ngày càng rộng rãi. Chữ W được cho là viết tắt của \"Winter – mùa đông\" chỉ khả năng khởi động khi trời lạnh. Nhớt đa cấp vừa bảo đảm độ nhớt phù hợp để bôi trơn tốt động cơ ở nhiệt độ cao vừa bảo đảm nhớt không quá đặc ở nhiệt độ thấp nhằm giúp xe dễ khởi động và vận hành.</p><p>Ở dầu nhớt đa cấp, chữ số đứng trước \"W\" dùng để chỉ khoảng nhiệt độ mà dầu đó giúp động cơ khởi động tốt. Nhiệt độ đó được xác định bằng cách lấy 30 trừ đi con số đó nhưng ở nhiệt độ âm. Chẳng hạn dầu 20W-50 khởi động tốt ở -10 độC. Dầu 10W-30 khởi động tốt ở -20 độC.</p><p>Trước đây khách hàng có thói quen dùng các loại nhớt đặc như nhớt đơn cấp SAE 50 hoặc đơn cấp SAEW 20W-50 với quan niệm nhớt càng đặc thì càng tốt. Hiện tại công nghệ dầu nhớt phát triển nên quan niệm này đang thay đổi. Nhờ có các loại phụ gia dầu có độ nhớt thấp như SAE 40 ; 15W-40 hay 10W-30 vừa bôi trơn và bảo vệ tốt động vừa mang lại những lợi ích khác như giảm tổn thất công suất, giảm tiêu hao nhiên liệu, giúp xe khởi động và vận hành ổn định.</p><p>Do vậy xu hướng hiện nay của các nhà chế tạo là khuyến nghị các loại dầu nhớt động cơ đa cấp và có độ nhớt thấp để sử dụng cho các vùng khí hậu khác nhau kể cả ở những nước có khí hậu nóng như Việt Nam.</p>",
+      "id": "news-1772434423663"
+    },
+    {
+      "id": "news-1772441497140",
+      "title": "Sự vượt trội của sản phẩm",
+      "excerpt": "<p>Áp dụng thành tựu khoa học hàng đầu thế giới, Các Copolymer Star (Hình sao) lần đầu tiên được ứng dụng tại Việt Nam nhờ các nhà phát triển sản phẩm&nbsp;Dầu nhờn bôi trơn</p>",
+      "content": "<p><strong>Áp dụng thành tựu khoa học hàng đầu thế giới, Các Copolymer Star (Hình sao) lần đầu tiên được ứng dụng tại Việt Nam nhờ các nhà phát triển sản phẩm&nbsp;Dầu nhờn bôi trơn động cơ đốt trong CAS. xx Turbo</strong></p><p><strong>NHỮNG ĐIỀU BẠN CẦN BIẾT VỀ CASPI ENGINE LUBRICANT</strong></p><p>Áp dụng thành tựu khoa học hàng đầu thế giới, Các Copolymer Star (Hình sao) lần đầu tiên được ứng dụng tại Việt Nam nhờ các nhà phát triển sản phẩm&nbsp;<strong>Dầu nhờn bôi trơn động cơ đốt trong CAS. xx Turbo.</strong>&nbsp;Các tính chất độc đáo của các Copolymer Star, đến từ cấu trúc hóa học của chúng như : Nhỏ gọn, nhiều cánh tay giống nhau bám vào nhân mà cấu trúc được coi là đồng nhất. Các đặc tính lưu biến, tự lắp ráp độc đáo, đem lại những tính năng hoàn hảo trong ứng dụng làm chất tăng chỉ số độ nhớt cho dầu bôi trơn. Đảm bảo các điều kiện bôi trơn ở nhiệt độ rất thấp và ở nhiệt rất độ cao. Tuyệt chiêu trong kiểm soát HTHS (High stemper – High Shear).</p><p><strong>Các sản phẩm Thông dụng – Nhưng là Duy nhất trên thị trường</strong></p><ul><li><p>Thời gian sử dụng bôi trơn hiệu quả nhất cho động cơ : Từ Kilomet 1 – 12.000, Nếu trường hợp lỡ chuyến thì có thể chạy lên đến 14.000 km. Điều này đã được chứng minh trên các xe Container&nbsp;vận tải nặng của các đơn vị mà chúng tôi cung ứng sản phẩm Engine Lubricants</p></li><li><p><strong>Dầu CAS. 9000&nbsp;</strong>dành riêng cho động cơ&nbsp;đánh bắt xa bờ, phù hợp với các động cơ Diesel Nhật như: YANMA, YAMAHA...Động cơ Diesel WEICHAI ...</p></li><li><p><strong>Dầu MARINE GEAR OIL SAE xx-30H.D&nbsp;</strong>cho hộp số giảm tốc kiểu ly hợp. ổn định hiệu suất truyền tải cho Chân vịt tàu – Phát huy công suất chạy tàu – Tiết kiệm nhiên liệu – Nâng cao hệ số An toàn khi lẩn tránh giông bão ..vv. Do dầu hộp số của chúng tôi được sản xuất với công nghệ tích hợp: Chống trượt cho ly hợp nhiều lá – Đảm bảo bôi trơn bánh răng số và bơm tăng áp hộp số.</p></li><li><p>\" Copolymers Star\" là vật liệu triển vọng mới mẻ cho nghành bôi trơn, nó có tầm ứng dụng rộng trong cả gốc khoáng và gôc tổng hợp. Tuy nhiên với giá cả đắt đỏ hiện nay, rất ít doanh nghiệp hay nói một cách khác là một vài doanh nghiệp giám mạnh dạn đi đầu trong ứng dụng này. Đem lại hiệu suất cao trong việc chống biến đổi độ nhớt suốt quá trình sử dụng.</p></li></ul><p></p>",
+      "image": "https://res.cloudinary.com/ddnasugap/image/upload/v1772441581/marshell/dn5kvmyk3t5r04k0nr3p.png",
+      "date": "08-01-2019",
+      "views": 0,
+      "category": "Hoạt động doanh nghiệp",
+      "featured": true
+    }
+  ],
+  "experience": [],
+  "company": {
+    "name": "Marshell",
+    "slogan": "Công ty TNHH Thành Lợi Marshell",
+    "address": "27 Đường Lý Thánh Tông, Phường Tân Hồng, Thị Xã Từ Sơn, Tỉnh Bắc Ninh",
+    "phone": "0964.737.266 / 0971.868.571",
+    "hotline": "0912.127.535",
+    "email": "marshell@gmail.com",
+    "website": "http://marshell.vn",
+    "workingHours": "Thứ 2 – Thứ 7: 8:00 – 17:30",
+    "logo": "/uploads/logo-1773803461508.png",
+    "logoBg": "#ffffff"
+  },
+  "hero": {
+    "title1": "Dầu nhớt",
+    "title2": "Petd",
+    "title3": "Chất lượng cao",
+    "experience": "+ 15 Năm Kinh Nghiệm",
+    "description": "Đối tác tin cậy cung cấp giải pháp bôi trơn toàn diện cho động cơ Diesel, xe tải và tàu thuyền tại Miền Bắc.",
+    "videoUrl": "https://res.cloudinary.com/ddnasugap/video/upload/v1773804939/marshell/p57glukr0tg9kxw7cbka.mp4"
+  },
+  "about": {
+    "title1": "Đối tác tin cậy",
+    "title2": "trong ngành dầu nhớt",
+    "description1": "Công ty TNHH Thành Lợi Marshell được thành lập với sứ mệnh mang đến những sản phẩm dầu nhớt chất lượng cao nhất cho thị trường Việt Nam.",
+    "description2": "Với hơn 15 năm kinh nghiệm, chúng tôi tự hào là đối tác tin cậy của hàng trăm doanh nghiệp vận tải, đội tàu và nhà máy sản xuất. Chúng tôi hợp tác chặt chẽ với các chuyên gia đầu ngành như Caspi Việt Nam để đảm bảo mỗi sản phẩm đều đạt tiêu chuẩn quốc tế.",
+    "features": [
+      {
+        "text": "100% nguyên liệu nhập khẩu từ các thương hiệu uy tín",
+        "icon": "Award"
+      },
+      {
+        "text": "Đội ngũ chuyên gia tư vấn giàu kinh nghiệm",
+        "icon": "Users"
+      },
+      {
+        "text": "Hệ thống phân phối rộng khắp miền Bắc",
+        "icon": "Truck"
+      },
+      {
+        "text": "Cam kết chất lượng và giá cả cạnh tranh",
+        "icon": "Shield"
+      },
+      {
+        "text": "Hỗ trợ kỹ thuật và tư vấn 24/7",
+        "icon": "HeadphonesIcon"
+      },
+      {
+        "text": "Chế độ bảo hành và đổi trả linh hoạt",
+        "icon": "Clock"
+      }
+    ],
+    "stats": [
+      {
+        "value": "15+",
+        "label": "Năm"
+      },
+      {
+        "value": "500+",
+        "label": "Khách hàng"
+      },
+      {
+        "value": "100%",
+        "label": "Cam kết"
+      }
+    ]
+  },
+  "stats": [
+    {
+      "value": 15,
+      "suffix": "+",
+      "label": "Năm kinh nghiệm",
+      "icon": "YRS",
+      "id": "stat-17737417781490"
+    },
+    {
+      "value": 500,
+      "suffix": "+",
+      "label": "Khách hàng tin dùng",
+      "icon": "KH",
+      "id": "stat-17737417781491"
+    },
+    {
+      "value": 100,
+      "suffix": "%",
+      "label": "Nguyên liệu nhập khẩu",
+      "icon": "NK",
+      "id": "stat-17737417781492"
+    },
+    {
+      "value": 24,
+      "suffix": "/7",
+      "label": "Hỗ trợ tư vấn",
+      "icon": "HRS",
+      "id": "stat-17737417781493"
+    }
+  ],
+  "partners": [
+    {
+      "name": "Brenntag",
+      "src": "/doi-tac/1952brenntag-logo.png",
+      "id": "partner-17737417781490"
+    },
+    {
+      "name": "Capi",
+      "src": "/doi-tac/2140capi-logo.png",
+      "id": "partner-17737417781491"
+    },
+    {
+      "name": "Partner 1",
+      "src": "/doi-tac/2945z2056048638252_fc3abcc29580723408f8c00ff2c5e6b5.jpg",
+      "id": "partner-17737417781492"
+    },
+    {
+      "name": "Partner 2",
+      "src": "/doi-tac/5079z2056040842422_9e10e52988eca410b7d69748e92337fc.jpg",
+      "id": "partner-17737417781493"
+    },
+    {
+      "name": "Lubrizol",
+      "src": "/doi-tac/9426lubrizol-logo.jpg",
+      "id": "partner-17737417781495"
+    }
+  ],
+  "settings": {
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59587.97785449778!2d106.0517698!3d21.1780556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31350a3536c10fa9%3A0x72706e93b32d95e2!2zQsaw4buDbmcgQsOtbmgsIFRQLiBCw6FjIG5pbmgsIELhuq9jIE5pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s",
+    "facebook": "https://facebook.com",
+    "zalo": "https://zalo.me"
+  },
+  "analytics": {
+    "totalVisitors": 15420,
+    "todayVisitors": 245,
+    "liveSessions": 12,
+    "measurementId": "G-YK5BMDFH63"
+  },
+  "contacts": [
+    {
+      "name": "pet d",
+      "phone": "0386117963",
+      "email": "perdhd1702@gmail.com",
+      "message": "ffgfsdffds",
+      "id": "contact-1773802085133",
+      "date": "2026-03-18T02:48:05.133Z",
+      "isCared": false,
+      "note": "Khách này không chiu",
+      "status": "read"
+    },
+    {
+      "name": "đfdfsf",
+      "email": "perdhd1702@gmail.com",
+      "phone": "0386117963",
+      "address": "đsfdsfdsfs",
+      "message": "đfdfdsfdsfds",
+      "id": "contact-1773817585756",
+      "date": "2026-03-18T07:06:25.756Z",
+      "isCared": false,
+      "note": ""
+    },
+    {
+      "name": "dffsfdsfds",
+      "email": "perdhd1702@gmail.com",
+      "phone": "0386117963",
+      "address": "Đúngadsad",
+      "message": "ádasdasdasd",
+      "id": "contact-1773817705331",
+      "date": "2026-03-18T07:08:25.331Z",
+      "isCared": false,
+      "note": ""
+    },
+    {
+      "name": "ưewqewq",
+      "email": "ffff@gmail.com",
+      "phone": "ưqewqewqe",
+      "address": "ưqewewqeqw",
+      "message": "ewqeqwew",
+      "id": "contact-1773818134765",
+      "date": "2026-03-18T07:15:34.765Z",
+      "isCared": false,
+      "note": ""
+    },
+    {
+      "name": "erererer",
+      "email": "perdhd1702@gmail.com",
+      "phone": "0386117963",
+      "address": "xsdadfasdasdasd",
+      "message": "sadasdasdsad",
+      "id": "contact-1773818383447",
+      "date": "2026-03-18T07:19:43.447Z",
+      "isCared": false,
+      "note": ""
+    },
+    {
+      "name": "dssdfdsfs",
+      "email": "perdhd1702@gmail.com",
+      "phone": "rưererewrew",
+      "address": "ểwrwerewr",
+      "message": "ưerwerwerwer",
+      "id": "contact-1773818572412",
+      "date": "2026-03-18T07:22:52.412Z",
+      "isCared": false,
+      "note": ""
+    },
+    {
+      "name": "đinh hữu dũng",
+      "email": "perdhd1702@gmail.com",
+      "phone": "Dung1702@",
+      "address": "DSADASDASDASD",
+      "message": "ASDASDASDASD",
+      "id": "contact-1773823249872",
+      "date": "2026-03-18T08:40:49.872Z",
+      "isCared": false,
+      "note": ""
+    },
+    {
+      "name": "3343123",
+      "email": "perdhd1702@gmail.com",
+      "phone": "32131221",
+      "address": "312321321312",
+      "message": "3123123213",
+      "id": "contact-1773825531330",
+      "date": "2026-03-18T09:18:51.330Z",
+      "isCared": false,
+      "note": ""
+    },
+    {
+      "name": "21323213",
+      "email": "perdhd1702@gmail.com",
+      "phone": "213213232",
+      "address": "3213213213",
+      "message": "12312312321",
+      "id": "contact-1773825664899",
+      "date": "2026-03-18T09:21:04.899Z",
+      "isCared": false,
+      "note": ""
+    },
+    {
+      "name": "dfdfsfsdf",
+      "email": "perdhd1702@gmail.com",
+      "phone": "03861179623421",
+      "address": "sdasdasdas",
+      "message": "dsadasdasdsa",
+      "id": "contact-1773825954419",
+      "date": "2026-03-18T09:25:54.419Z",
+      "isCared": false,
+      "note": ""
+    },
+    {
+      "name": "313312321",
+      "email": "perdhd1702@gmail.com",
+      "phone": "312331",
+      "address": "31231231232",
+      "message": "312312312",
+      "id": "contact-1773826684352",
+      "date": "2026-03-18T09:38:04.352Z",
+      "isCared": false,
+      "note": ""
+    }
+  ]
+}
