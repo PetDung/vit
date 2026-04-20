@@ -1,4 +1,4 @@
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3002"
+const API = process.env.NEXT_PUBLIC_API_URL || "http://180.93.52.142:3007"
 
 /* ─── Generic CRUD ─── */
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
@@ -92,7 +92,7 @@ export const contactsApi = {
   update: (id: string, data: any) => request<any>(`${API}/contacts/${id}`, { method: "PUT", body: JSON.stringify(data) }),
   delete: (id: string) => request<void>(`${API}/contacts/${id}`, { method: "DELETE" }),
 }
- 
+
 /* ─── Analytics ─── */
 export const analyticsApi = {
   get: () => request<any>(`${API}/analytics`),
