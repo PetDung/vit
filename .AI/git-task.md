@@ -5,9 +5,9 @@
 - Task: Push the project to GitHub repository `git@github.com:PetDung/vit.git`.
 
 ## Steps
-1. Create `README.md`.
-2. Add all files to git.
-3. Commit changes.
-4. Rename branch to `main`.
-5. Add remote `origin`.
-6. Push to `main`.
+1. [x] Create `README.md`.
+2. [x] Add all files to git.
+3. [x] Commit changes.
+4. [x] Rename branch to `main`.
+5. [x] Add remote `origin`.
+6. [x] Push to `main`.
