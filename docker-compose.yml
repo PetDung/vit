@@ -11,7 +11,7 @@ services:
       - GOOGLE_PRIVATE_KEY=${GOOGLE_PRIVATE_KEY}
       - GA4_PROPERTY_ID=${GA4_PROPERTY_ID}
     env_file:
-      - .env.local
+      - .env
     depends_on:
       - api
     networks:
