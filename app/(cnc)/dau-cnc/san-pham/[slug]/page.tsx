@@ -2,27 +2,49 @@ import { fetchCnc, findCncBySlug } from "@/lib/cnc"
 import { toSlug } from "@/lib/utils"
 import ProductClientPage from "./client-page"
 import { Metadata } from 'next'
- 
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params
     const products = await fetchCnc()
     const product = findCncBySlug(products, slug)
- 
+
     if (!product) {
         return {
             title: "Sản phẩm không tồn tại - Marshell",
             description: "Không tìm thấy sản phẩm bạn yêu cầu."
         }
     }
- 
+
+    const productUrl = `https://marshell.vn/dau-cnc/san-pham/${toSlug(product.name, product.id)}`
+    const cleanDesc = product.description?.replace(/<[^>]*>?/gm, '').substring(0, 160) || ''
+
     return {
-        title: `${product.name} - Dầu Nhớt Marshell Chính Hãng`,
-        description: product.description.replace(/<[^>]*>?/gm, '').substring(0, 160),
+        title: `${product.name} - Dầu Máy CNC Marshell Chính Hãng`,
+        description: cleanDesc,
+        keywords: [product.name, 'dầu máy cnc', 'dầu cắt gọt', 'marshell cnc', 'dầu bôi trơn cnc'],
+        alternates: {
+            canonical: productUrl,
+        },
         openGraph: {
-            title: product.name,
-            description: product.description.replace(/<[^>]*>?/gm, '').substring(0, 160),
+            title: `${product.name} - Dầu Máy CNC Marshell`,
+            description: cleanDesc,
+            url: productUrl,
+            siteName: 'Marshell Vietnam',
+            type: 'website',
+            images: [
+                {
+                    url: product.image,
+                    width: 800,
+                    height: 800,
+                    alt: product.name
+                }
+            ]
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: `${product.name} - Dầu Máy CNC Marshell`,
+            description: cleanDesc,
             images: [product.image],
-            type: 'website'
         }
     }
 }

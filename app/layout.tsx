@@ -1,5 +1,5 @@
 import React from "react"
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Roboto_Condensed } from 'next/font/google'
 import './globals.css'
 import { SmoothScroll } from "@/components/smooth-scroll"
@@ -13,7 +13,13 @@ const robotoCondensed = Roboto_Condensed({
     weight: ["300", "400", "500", "600", "700"]
 });
 
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+}
+
 export const metadata: Metadata = {
+    metadataBase: new URL('https://marshell.vn'),
     title: {
         default: 'Marshell - Dầu Nhớt Công Nghiệp & CNC Chính Hãng',
         template: '%s | Marshell Vietnam'
@@ -21,7 +27,6 @@ export const metadata: Metadata = {
     description: 'Công ty TNHH Thành Lợi Marshell - 15 năm kinh nghiệm cung cấp giải pháp bôi trơn toàn diện cho động cơ Diesel, máy CNC và thiết bị công nghiệp.',
     keywords: ['dầu nhớt', 'dầu cnc', 'dầu thủy lực', 'marshell', 'thành lợi marshell', 'dầu cắt gọt', 'dầu bôi trơn'],
     authors: [{ name: 'Marshell Vietnam' }],
-    viewport: 'width=device-width, initial-scale=1',
     robots: 'index, follow',
     openGraph: {
         type: 'website',

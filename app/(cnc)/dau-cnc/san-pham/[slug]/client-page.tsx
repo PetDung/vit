@@ -9,9 +9,11 @@ import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { toSlug } from "@/lib/utils"
 import { findCncBySlug, type CncProduct as Product } from "@/lib/cnc"
-import { Phone, Loader2, ChevronRight, ScrollText, AlignJustify, Share2 } from "lucide-react"
+import { Phone, Loader2, ChevronRight, ScrollText, AlignJustify, Share2, Link2 } from "lucide-react"
 import Link from "next/link"
 import { sendGAEvent } from '@next/third-parties/google';
+import { shareFacebook, shareZalo, copyLink } from "@/lib/share"
+import { toast } from "sonner"
 
 export default function ProductClientPage({ initialProducts, slug }: { initialProducts: Product[], slug: string }) {
     const router = useRouter()
@@ -24,7 +26,12 @@ export default function ProductClientPage({ initialProducts, slug }: { initialPr
     const [activeIndex, setActiveIndex] = useState(initialIdx >= 0 ? initialIdx : 0)
     const [loading, setLoading] = useState(false)
     const [activeImage, setActiveImage] = useState<string>(initialProd?.image || "")
+    const [currentUrl, setCurrentUrl] = useState<string>("")
     const contentRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        setCurrentUrl(window.location.href)
+    }, [])
 
     const scrollToContent = () => {
         contentRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -175,10 +182,8 @@ export default function ProductClientPage({ initialProducts, slug }: { initialPr
                                 <div className="flex items-center gap-2">
                                     <button
                                         onClick={() => {
-                                            if (typeof window !== 'undefined') {
-                                                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank')
-                                                sendGAEvent('event', 'share', { method: 'facebook', content_type: 'product', item_id: product.name })
-                                            }
+                                            shareFacebook({ url: currentUrl, title: product.name, description: product.description?.replace(/<[^>]*>?/gm, '').substring(0, 160), image: product.image })
+                                            sendGAEvent('event', 'share', { method: 'facebook', content_type: 'product', item_id: product.name })
                                         }}
                                         className="w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center bg-white/5 border border-white/10 hover:bg-primary/20 hover:text-primary hover:border-primary/50 transition-all text-white/50"
                                     >
@@ -186,14 +191,22 @@ export default function ProductClientPage({ initialProducts, slug }: { initialPr
                                     </button>
                                     <button
                                         onClick={() => {
-                                            if (typeof window !== 'undefined') {
-                                                window.open(`https://zalo.me/share?url=${encodeURIComponent(window.location.href)}`, '_blank')
-                                                sendGAEvent('event', 'share', { method: 'zalo', content_type: 'product', item_id: product.name })
-                                            }
+                                            shareZalo({ url: currentUrl, title: product.name, description: product.description?.replace(/<[^>]*>?/gm, '').substring(0, 160), image: product.image })
+                                            sendGAEvent('event', 'share', { method: 'zalo', content_type: 'product', item_id: product.name })
                                         }}
                                         className="flex-1 h-10 lg:h-12 flex items-center justify-center bg-white/5 border border-white/10 hover:bg-primary/20 hover:text-primary hover:border-primary/50 transition-all text-[11px] font-black uppercase tracking-widest text-white/50"
                                     >
                                         Zalo
+                                    </button>
+                                    <button
+                                        onClick={async () => {
+                                            const ok = await copyLink(currentUrl)
+                                            if (ok) toast.success("Đã sao chép liên kết!")
+                                        }}
+                                        className="w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center bg-white/5 border border-white/10 hover:bg-primary/20 hover:text-primary hover:border-primary/50 transition-all text-white/50"
+                                        title="Sao chép liên kết"
+                                    >
+                                        <Link2 className="w-4 h-4" />
                                     </button>
                                 </div>
                             </div>

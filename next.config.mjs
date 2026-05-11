@@ -1,13 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
-  experimental: {
-    turbo: {
-      noTurbo: true,
-    },
-  },
+  poweredByHeader: false,
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   images: {
     remotePatterns: [
@@ -16,6 +12,12 @@ const nextConfig = {
         hostname: '**',
       },
     ],
+  },
+  // Fix symlink EPERM on Windows by using hardlinks instead of symlinks
+  experimental: {
+    outputFileTracingIncludes: {
+      '/api/**': ['./db.json'],
+    },
   },
 }
 
