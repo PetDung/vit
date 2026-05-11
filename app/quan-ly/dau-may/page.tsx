@@ -26,7 +26,7 @@ import { Label } from "@/components/ui/label"
 import { RichTextEditor } from "@/components/rich-editor"
 import { MultiImageUpload } from "@/components/ui/multi-image-upload"
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3002"
+import { API_URL as API } from "@/lib/config"
 
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
   const res = await fetch(url, {

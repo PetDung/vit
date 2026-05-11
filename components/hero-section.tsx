@@ -7,6 +7,8 @@ import { useScroll, useMotionValueEvent, useMotionValue, useSpring } from "frame
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Volume2, VolumeX } from "lucide-react"
 import { sendGAEvent } from '@next/third-parties/google';
+import { usePathname } from "next/navigation"
+import { getThemeFromPath, themedHref } from "@/lib/theme-config"
 
 import { Parallax } from "@/components/parallax"
 import { Reveal } from "./reveal"
@@ -19,6 +21,10 @@ export function HeroSection({ initialData }: { initialData: HeroConfig | null })
   const videoRef = useRef<HTMLVideoElement>(null)
   const containerRef = useRef<HTMLElement>(null)
   const isOffScreenRef = useRef(false)
+
+  const pathname = usePathname()
+  const theme = getThemeFromPath(pathname)
+  const basePath = theme.basePath
 
   const fadeIntervalRef = useRef<NodeJS.Timeout | null>(null)
   const isFadingInRef = useRef(false)
@@ -269,7 +275,7 @@ export function HeroSection({ initialData }: { initialData: HeroConfig | null })
 
           <Reveal delay={800}>
             <div className="mt-10 flex flex-col sm:flex-row gap-5">
-              <Link href="/san-pham">
+              <Link href={themedHref(basePath, "/san-pham")}>
                 <Button 
                   size="lg" 
                   onClick={() => sendGAEvent('event', 'click', { event_category: 'engagement', event_label: 'hero_check_products' })}
@@ -279,7 +285,7 @@ export function HeroSection({ initialData }: { initialData: HeroConfig | null })
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link href="/lien-he">
+              <Link href={themedHref(basePath, "/lien-he")}>
                 <Button 
                   size="lg" 
                   variant="outline" 

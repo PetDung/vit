@@ -20,7 +20,7 @@ export interface Product {
   techSpecUrl?: string;
 }
 
-const API = "http://180.93.52.142:3007"
+import { API_URL as API } from "./config"
 
 /* Generate an SEO-friendly slug: ten-id, e.g. "lesturbo-15w-40-lt-01" */
 export function toSlug(name: string, id: string): string {

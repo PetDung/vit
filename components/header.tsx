@@ -3,38 +3,44 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X, Phone, ChevronDown } from "lucide-react"
+import { Menu, X, Phone, ChevronDown, ArrowLeftRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { fetchProducts, toSlug } from "@/lib/products"
 import { fetchCompany, type CompanyInfo } from "@/lib/company"
 import { sendGAEvent } from '@next/third-parties/google';
-
-const baseNavigation = [
-  { name: "Trang chủ", href: "/" },
-  {
-    name: "Sản phẩm",
-    href: "/san-pham",
-    children: [] as { name: string; href: string }[],
-  },
-  { name: "Giới thiệu", href: "/ve-chung-toi" },
-  { name: "Kinh nghiệm", href: "/kinh-nghiem" },
-  { name: "Tin tức", href: "/tin-tuc" },
-  { name: "Liên hệ", href: "/lien-he" },
-]
-
 import { usePathname } from "next/navigation"
+import { getThemeFromPath, themedHref, THEMES, type ThemeId } from "@/lib/theme-config"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [navigation, setNavigation] = useState(baseNavigation)
+  const [productChildren, setProductChildren] = useState<{ name: string; href: string }[]>([])
   const [company, setCompany] = useState<CompanyInfo | null>(null)
-  
+
   const pathname = usePathname()
-  const isHome = pathname === "/"
-  // Determine if it's the product detail page to make the header overlay the hero
-  const isProductDetailPage = pathname.startsWith("/san-pham/") && pathname !== "/san-pham"
+  const theme = getThemeFromPath(pathname)
+  const basePath = theme.basePath
+
+  // Determine the "other" theme for the switch button
+  const otherThemeId: ThemeId = theme.id === "co-khi" ? "cnc" : "co-khi"
+  const otherTheme = THEMES[otherThemeId]
+
+  const navigation = [
+    { name: "Trang chủ", href: basePath },
+    {
+      name: "Sản phẩm",
+      href: themedHref(basePath, "/san-pham"),
+      children: productChildren,
+    },
+    { name: "Giới thiệu", href: themedHref(basePath, "/ve-chung-toi") },
+    { name: "Kinh nghiệm", href: themedHref(basePath, "/kinh-nghiem") },
+    { name: "Tin tức", href: themedHref(basePath, "/tin-tuc") },
+    { name: "Liên hệ", href: themedHref(basePath, "/lien-he") },
+  ]
+
+  const isHome = pathname === basePath
+  const isProductDetailPage = pathname.startsWith(themedHref(basePath, "/san-pham/"))
   const isTransparentHeader = isHome || isProductDetailPage
 
   useEffect(() => {
@@ -46,20 +52,45 @@ export function Header() {
   }, [])
 
   useEffect(() => {
-    fetchProducts().then(data => {
-      if (data.length > 0) {
-        setNavigation(prev => prev.map(item =>
-          item.name === "Sản phẩm"
-            ? { ...item, children: data.slice(0, 3).map(p => ({ name: p.name, href: `/san-pham/${toSlug(p.name, p.id)}` })) }
-            : item
-        ))
+    const fetchThemeProducts = async () => {
+      try {
+        let data = []
+        if (theme.id === "cnc") {
+          const { fetchCnc } = await import("@/lib/cnc")
+          data = await fetchCnc()
+        } else {
+          data = await fetchProducts()
+        }
+
+        if (data.length > 0) {
+          setProductChildren(
+            data.slice(0, 3).map(p => ({
+              name: p.name,
+              href: `${themedHref(basePath, "/san-pham")}/${toSlug(p.name, p.id)}`
+            }))
+          )
+        }
+      } catch (error) {
+        console.error("Error fetching menu products:", error)
       }
-    })
-    
+    }
+
+    fetchThemeProducts()
+
     fetchCompany().then(data => {
       setCompany(data)
     })
-  }, [])
+  }, [basePath, theme.id])
+
+  // Check if a nav item is active
+  const isActive = (href: string) => {
+    if (href === basePath) return pathname === basePath
+    return pathname.startsWith(href)
+  }
+
+  // Primary color for hazard stripe
+  const stripeColor = theme.id === "cnc" ? "#4A9EFF" : "#ffcb05"
+  const glowColor = theme.id === "cnc" ? "rgba(74,158,255,0.5)" : "rgba(255,215,0,0.5)"
 
   return (
     <header className={cn(
@@ -67,12 +98,12 @@ export function Header() {
       isTransparentHeader ? "fixed" : "sticky",
       isScrolled ? "py-0" : "py-4"
     )}>
-      {/* Hazard stripe top - only show when scrolled or always? Keep always for brand */}
+      {/* Hazard stripe top */}
       <div className={cn(
         "h-1 transition-opacity duration-300",
         isScrolled ? "opacity-100" : "opacity-0"
       )} style={{
-        background: 'repeating-linear-gradient(45deg, #ffcb05, #ffcb05 8px, #000 8px, #000 16px)'
+        background: `repeating-linear-gradient(45deg, ${stripeColor}, ${stripeColor} 8px, #000 8px, #000 16px)`
       }} />
 
       <div className={cn(
@@ -90,18 +121,18 @@ export function Header() {
                   href={item.href}
                   className={cn(
                     "flex items-center gap-1 text-sm font-bold uppercase tracking-wider transition-colors relative",
-                    (item.href === "/" ? pathname === "/" : pathname.startsWith(item.href))
+                    isActive(item.href)
                       ? "text-primary"
                       : "text-secondary-foreground/80 hover:text-primary"
                   )}
                 >
                   {item.name}
-                  {item.children && <ChevronDown className="h-4 w-4" />}
-                  {(item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)) && (
+                  {"children" in item && item.children && item.children.length > 0 && <ChevronDown className="h-4 w-4" />}
+                  {isActive(item.href) && (
                     <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-primary rounded-full" />
                   )}
                 </Link>
-                {item.children && (
+                {"children" in item && item.children && item.children.length > 0 && (
                   <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <div className="bg-card border-2 border-border shadow-xl p-2 min-w-[180px]">
                       {item.children.map((child) => (
@@ -134,14 +165,17 @@ export function Header() {
 
           {/* Center logo */}
           <div className="flex justify-center">
-            <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-              <div 
-                className="p-2 rounded-sm shadow-[0_0_15px_rgba(255,215,0,0.5)] flex items-center justify-center w-[160px] h-[45px] overflow-hidden transition-colors"
-                style={{ backgroundColor: company?.logoBg || '#ffcb05' }}
+            <Link href={basePath} className="-m-1.5 p-1.5 flex items-center gap-2">
+              <div
+                className="p-2 rounded-sm flex items-center justify-center w-[160px] h-[45px] overflow-hidden transition-colors"
+                style={{
+                  backgroundColor: company?.logoBg || (theme.id === "cnc" ? "#1a3050" : "#ffcb05"),
+                  boxShadow: `0 0 15px ${glowColor}`
+                }}
               >
                 <Image
                   src="/logo.png"
-                  alt="Marshell Logo"
+                  alt={theme.logoAlt}
                   width={160}
                   height={45}
                   className="w-full h-full object-contain"
@@ -153,24 +187,39 @@ export function Header() {
           </div>
 
           {/* Right navigation */}
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-8">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-6">
             {navigation.slice(4).map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 className={cn(
                   "text-sm font-bold uppercase tracking-wider transition-colors relative",
-                  pathname.startsWith(item.href)
+                  isActive(item.href)
                     ? "text-primary"
                     : "text-secondary-foreground/80 hover:text-primary"
                 )}
               >
                 {item.name}
-                {pathname.startsWith(item.href) && (
+                {isActive(item.href) && (
                   <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-primary rounded-full" />
                 )}
               </Link>
             ))}
+
+            {/* Theme switch button */}
+            <Link
+              href={otherTheme.basePath}
+              className={cn(
+                "flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-3 py-2 rounded-full border transition-all duration-300",
+                theme.id === "cnc"
+                  ? "border-[#FFD700]/30 text-[#FFD700]/80 hover:bg-[#FFD700]/10 hover:border-[#FFD700]/60"
+                  : "border-[#4A9EFF]/30 text-[#4A9EFF]/80 hover:bg-[#4A9EFF]/10 hover:border-[#4A9EFF]/60"
+              )}
+            >
+              <ArrowLeftRight className="h-3 w-3" />
+              {otherTheme.name}
+            </Link>
+
             <a
               href="tel:0912127535"
               onClick={() => sendGAEvent('event', 'click', { event_category: 'conversion', event_label: 'header_call' })}
@@ -191,20 +240,23 @@ export function Header() {
         />
         <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm border-l-2 border-border">
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-                 <div 
-                   className="p-1.5 rounded-sm shadow-[0_0_10px_rgba(255,215,0,0.5)] flex items-center justify-center w-[120px] h-[32px] overflow-hidden transition-colors"
-                   style={{ backgroundColor: company?.logoBg || '#ffcb05' }}
-                 >
-                    <Image
-                      src="/logo.png"
-                      alt="Marshell Logo"
-                      width={120}
-                      height={32}
-                      className="w-full h-full object-contain"
-                      unoptimized
-                    />
-                 </div>
+            <Link href={basePath} className="-m-1.5 p-1.5 flex items-center gap-2">
+              <div
+                className="p-1.5 rounded-sm flex items-center justify-center w-[120px] h-[32px] overflow-hidden transition-colors"
+                style={{
+                  backgroundColor: company?.logoBg || (theme.id === "cnc" ? "#1a3050" : "#ffcb05"),
+                  boxShadow: `0 0 10px ${glowColor}`
+                }}
+              >
+                <Image
+                  src="/logo.png"
+                  alt={theme.logoAlt}
+                  width={120}
+                  height={32}
+                  className="w-full h-full object-contain"
+                  unoptimized
+                />
+              </div>
             </Link>
             <button
               type="button"
@@ -215,8 +267,24 @@ export function Header() {
               <X className="h-6 w-6" />
             </button>
           </div>
+
+          {/* Theme switch button in mobile */}
           <div className="mt-4 flex justify-center">
+            <Link
+              href={otherTheme.basePath}
+              onClick={() => setMobileMenuOpen(false)}
+              className={cn(
+                "flex items-center gap-2 text-sm font-bold uppercase tracking-wider px-4 py-2 rounded-full border transition-all duration-300",
+                theme.id === "cnc"
+                  ? "border-[#FFD700]/30 text-[#FFD700] hover:bg-[#FFD700]/10"
+                  : "border-[#4A9EFF]/30 text-[#4A9EFF] hover:bg-[#4A9EFF]/10"
+              )}
+            >
+              <ArrowLeftRight className="h-4 w-4" />
+              Chuyển sang {otherTheme.name}
+            </Link>
           </div>
+
           <div className="mt-4 flow-root">
             <div className="-my-6 divide-y divide-border">
               <div className="space-y-1 py-6">
@@ -226,7 +294,7 @@ export function Header() {
                       href={item.href}
                       className={cn(
                         "-mx-3 block px-3 py-3 text-base font-bold uppercase tracking-wide transition-colors",
-                        (item.href === "/" ? pathname === "/" : pathname.startsWith(item.href))
+                        isActive(item.href)
                           ? "bg-primary text-primary-foreground"
                           : "text-foreground hover:bg-primary hover:text-primary-foreground"
                       )}
@@ -234,7 +302,7 @@ export function Header() {
                     >
                       {item.name}
                     </Link>
-                    {item.children && (
+                    {"children" in item && item.children && item.children.length > 0 && (
                       <div className="pl-4 border-l-2 border-primary ml-3">
                         {item.children.map((child) => (
                           <Link

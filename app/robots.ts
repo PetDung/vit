@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/quan-ly/',
     },
-    sitemap: 'https://www.marshell.com.vn/sitemap.xml',
+    sitemap: 'https://marshell.vn/sitemap.xml',
   }
 }

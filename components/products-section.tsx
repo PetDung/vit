@@ -5,6 +5,8 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { Parallax } from "@/components/parallax"
+import { usePathname } from "next/navigation"
+import { getThemeFromPath, themedHref } from "@/lib/theme-config"
 
 import { toSlug, type Product } from "@/lib/products"
 
@@ -14,6 +16,8 @@ import { sendGAEvent } from '@next/third-parties/google';
 
 export function ProductsSection({ initialData }: { initialData: Product[] }) {
   const [products, setProducts] = useState<Product[]>(initialData)
+  const pathname = usePathname()
+  const basePath = getThemeFromPath(pathname).basePath
 
   useEffect(() => {
     if (initialData && products.length === 0) setProducts(initialData)
@@ -53,7 +57,7 @@ export function ProductsSection({ initialData }: { initialData: Product[] }) {
             </Reveal>
           </div>
           <Reveal delay={200} className="lg:text-right">
-            <Link href="/san-pham">
+            <Link href={themedHref(basePath, "/san-pham")}>
               <Button variant="outline" className="gap-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold uppercase tracking-wide">
                 Xem toàn bộ danh mục <ArrowRight className="w-4 h-4" />
               </Button>
@@ -104,7 +108,7 @@ export function ProductsSection({ initialData }: { initialData: Product[] }) {
                     : product.description}
                 </p>
                 <Link 
-                  href={`/san-pham/${toSlug(product.name, product.id)}`}
+                  href={`${themedHref(basePath, "/san-pham")}/${toSlug(product.name, product.id)}`}
                   onClick={() => sendGAEvent('event', 'click', { 
                     event_category: 'engagement', 
                     event_label: `home_to_product_${product.name}` 

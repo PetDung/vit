@@ -1,4 +1,4 @@
-const API ="http://180.93.52.142:3007"
+import { API_URL as API } from "./config"
 
 export interface HeroConfig {
   title1: string

@@ -1,6 +1,6 @@
 import { Award, Users, Truck, Shield, HeadphonesIcon, Clock } from "lucide-react"
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3002"
+import { API_URL as API } from "./config"
 
 // We map string icon names from db to lucide components
 const IconMap: Record<string, any> = {

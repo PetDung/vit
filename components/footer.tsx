@@ -8,47 +8,78 @@ import { fetchSettings, type Settings } from "@/lib/settings"
 import { fetchProducts, toSlug } from "@/lib/products"
 import { useState, useEffect } from "react"
 import { sendGAEvent } from '@next/third-parties/google';
-
-const navigation = {
-  company: [
-    { name: "Giới thiệu", href: "/ve-chung-toi" },
-    { name: "Tin tức", href: "/tin-tuc" },
-    { name: "Kinh nghiệm", href: "/kinh-nghiem" },
-  ],
-  support: [
-    { name: "Liên hệ", href: "/lien-he" },
-    { name: "Chính sách bảo hành", href: "/lien-he" },
-    { name: "Câu hỏi thường gặp", href: "/lien-he" },
-    { name: "Hướng dẫn sử dụng", href: "/kinh-nghiem" },
-  ],
-}
+import { usePathname } from "next/navigation"
+import { getThemeFromPath, themedHref } from "@/lib/theme-config"
 
 export function Footer() {
   const [company, setCompany] = useState<CompanyInfo>(DEFAULT_COMPANY)
   const [settings, setSettings] = useState<Settings | null>(null)
   const [productLinks, setProductLinks] = useState<{ name: string; href: string }[]>([])
 
+  const pathname = usePathname()
+  const theme = getThemeFromPath(pathname)
+  const basePath = theme.basePath
+
+  const stripeColor = theme.id === "cnc" ? "#4A9EFF" : "#ffcb05"
+  const stripePattern = `repeating-linear-gradient(45deg, ${stripeColor}, ${stripeColor} 10px, #000 10px, #000 20px)`
+  const diagonalColor = theme.id === "cnc" ? "rgba(74,158,255,0.1)" : "rgba(255,215,0,0.1)"
+  const glowColor = theme.id === "cnc" ? "rgba(74,158,255,0.5)" : "rgba(255,215,0,0.5)"
+
+  const navigation = {
+    company: [
+      { name: "Giới thiệu", href: themedHref(basePath, "/ve-chung-toi") },
+      { name: "Tin tức", href: themedHref(basePath, "/tin-tuc") },
+      { name: "Kinh nghiệm", href: themedHref(basePath, "/kinh-nghiem") },
+    ],
+    support: [
+      { name: "Liên hệ", href: themedHref(basePath, "/lien-he") },
+      { name: "Chính sách bảo hành", href: themedHref(basePath, "/lien-he") },
+      { name: "Câu hỏi thường gặp", href: themedHref(basePath, "/lien-he") },
+      { name: "Hướng dẫn sử dụng", href: themedHref(basePath, "/kinh-nghiem") },
+    ],
+  }
+
   useEffect(() => {
     fetchCompany().then(setCompany)
     fetchSettings().then(setSettings)
-    fetchProducts().then(data => {
-      setProductLinks(data.slice(0, 3).map(p => ({ name: p.name, href: `/san-pham/${toSlug(p.name, p.id)}` })))
-    })
-  }, [])
+    
+    const fetchThemeProducts = async () => {
+      try {
+        let data = []
+        if (theme.id === "cnc") {
+          const { fetchCnc } = await import("@/lib/cnc")
+          data = await fetchCnc()
+        } else {
+          data = await fetchProducts()
+        }
+        
+        if (data.length > 0) {
+          setProductLinks(
+            data.slice(0, 3).map(p => ({ 
+              name: p.name, 
+              href: `${themedHref(basePath, "/san-pham")}/${toSlug(p.name, p.id)}` 
+            }))
+          )
+        }
+      } catch (error) {
+        console.error("Error fetching footer products:", error)
+      }
+    }
+    
+    fetchThemeProducts()
+  }, [basePath, theme.id])
 
   return (
     <footer className="bg-secondary text-secondary-foreground relative overflow-hidden">
-      <div className="h-2" style={{
-        background: 'repeating-linear-gradient(45deg, #ffcb05, #ffcb05 10px, #000 10px, #000 20px)'
-      }} />
+      <div className="h-2" style={{ background: stripePattern }} />
 
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 opacity-5 pointer-events-none" style={{
           backgroundImage: `
             repeating-linear-gradient(
               -45deg,
-              rgba(255, 215, 0, 0.1),
-              rgba(255, 215, 0, 0.1) 1px,
+              ${diagonalColor},
+              ${diagonalColor} 1px,
               transparent 1px,
               transparent 20px
             )
@@ -59,14 +90,17 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-block">
+            <Link href={basePath} className="inline-block">
               <div
                 className="p-3 rounded-sm shadow-md inline-block w-[180px] h-[55px] overflow-hidden transition-colors"
-                style={{ backgroundColor: company.logoBg || '#ffcb05' }}
+                style={{
+                  backgroundColor: company.logoBg || (theme.id === "cnc" ? "#1a3050" : "#ffcb05"),
+                  boxShadow: `0 0 10px ${glowColor}`
+                }}
               >
                 <Image
                   src="/logo.png"
-                  alt="Marshell Logo"
+                  alt={theme.logoAlt}
                   width={180}
                   height={55}
                   className="w-full h-full object-contain"

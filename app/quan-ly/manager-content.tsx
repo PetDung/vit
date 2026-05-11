@@ -8,7 +8,7 @@ import {
     Award, BarChart3, Globe, TrendingUp
 } from "lucide-react"
 import Link from "next/link"
-import { productApi, newsApi, experienceApi, contactsApi, analyticsApi } from "@/lib/api"
+import { productApi, newsApi, experienceApi, contactsApi, analyticsApi, cncApi } from "@/lib/api"
 import { 
     ResponsiveContainer, AreaChart, Area, XAxis, YAxis, 
     CartesianGrid, Tooltip, BarChart, Bar, Cell 
@@ -28,6 +28,7 @@ export default function ManagerPageContent() {
     const [realtimeLoading, setRealtimeLoading] = useState(true);
     const [counts, setCounts] = useState({
         products: 0,
+        cncProducts: 0,
         articles: 0,
         contacts: 0,
         visitors: 0,
@@ -43,8 +44,9 @@ export default function ManagerPageContent() {
         // 1. Fetch count stats
         const fetchCounts = async () => {
             try {
-                const [products, news, experience, contacts, analytics] = await Promise.all([
+                const [products, cncProducts, news, experience, contacts, analytics] = await Promise.all([
                     productApi.getAll(),
+                    cncApi.getAll(),
                     newsApi.getAll(),
                     experienceApi.getAll(),
                     contactsApi.getAll(),
@@ -52,6 +54,7 @@ export default function ManagerPageContent() {
                 ])
                 setCounts({
                     products: products?.length || 0,
+                    cncProducts: cncProducts?.length || 0,
                     articles: (news?.length || 0) + (experience?.length || 0),
                     contacts: contacts?.filter((c: any) => c.status === 'unread')?.length || 0,
                     visitors: analytics?.totalVisitors || 0,
@@ -109,18 +112,20 @@ export default function ManagerPageContent() {
     }, [])
 
     const stats = [
-        { title: "Tổng Sản Phẩm", value: loading ? "..." : counts.products.toString(), icon: Package, color: "text-blue-500", bg: "bg-blue-500/10", tag: "Tồn kho" },
+        { title: "Sản Phẩm Cơ Khí", value: loading ? "..." : counts.products.toString(), icon: Package, color: "text-blue-500", bg: "bg-blue-500/10", tag: "Cơ khí" },
+        { title: "Sản Phẩm CNC", value: loading ? "..." : counts.cncProducts.toString(), icon: Activity, color: "text-primary", bg: "bg-primary/10", tag: "CNC" },
         { title: "Bài Viết", value: loading ? "..." : counts.articles.toString(), icon: FileText, color: "text-green-500", bg: "bg-green-500/10", tag: "Nội dung" },
         { title: "Liên Hệ Mới", value: loading ? "..." : counts.contacts.toString(), icon: MessageSquare, color: "text-amber-500", bg: "bg-amber-500/10", tag: "Khách hàng" },
         { title: "Đang truy cập", value: activeUsers.toString(), icon: Globe, color: "text-purple-500", bg: "bg-purple-500/10", tag: "GA4 Live", isGA: true },
     ]
 
     const menuItems = [
-        { title: "Quản lý Sản phẩm", desc: "Thêm, sửa, xóa sản phẩm và danh mục", icon: Package, href: "/quan-ly/san-pham" },
-        { title: "Quản lý Tin tức", desc: "Quản lý bài viết, chuyên mục tin tức", icon: FileText, href: "/quan-ly/tin-tuc" },
-        { title: "Kinh nghiệm & Mẹo", desc: "Quản lý bài viết chia sẻ kinh nghiệm", icon: Award, href: "/quan-ly/kinh-nghiem" },
+        { title: "Sản phẩm Cơ Khí", desc: "Quản lý sản phẩm dầu nhớt cơ khí", icon: Package, href: "/quan-ly/san-pham" },
+        { title: "Sản phẩm CNC", desc: "Quản lý sản phẩm dầu máy CNC", icon: Activity, href: "/quan-ly/dau-cnc" },
+        { title: "Cấu hình Cơ Khí", desc: "Biểu trưng, Hero, SEO cho Cơ Khí", icon: Settings, href: "/quan-ly/cai-dat" },
+        { title: "Cấu hình CNC", desc: "Hero, About, Stats cho mảng CNC", icon: Settings, href: "/quan-ly/cai-dat-cnc" },
+        { title: "Tin tức & Sự kiện", desc: "Quản lý bài viết, chuyên mục tin tức", icon: FileText, href: "/quan-ly/tin-tuc" },
         { title: "Khách hàng liên hệ", desc: "Xem và phản hồi yêu cầu liên hệ", icon: MessageSquare, href: "/quan-ly/lien-he" },
-        { title: "Cấu hình Website", desc: "Biểu trưng, thông tin liên hệ, SEO", icon: Settings, href: "/quan-ly/cai-dat" },
     ]
 
     return (
@@ -155,7 +160,7 @@ export default function ManagerPageContent() {
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
                     {stats.map((stat, i) => (
                         <motion.div
                             key={i}

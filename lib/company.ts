@@ -10,7 +10,7 @@ export interface CompanyInfo {
   logoBg?: string
 }
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3002"
+import { API_URL as API } from "./config"
 
 const DEFAULT_COMPANY: CompanyInfo = {
   name: "Marshell Vietnam",

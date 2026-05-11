@@ -17,7 +17,7 @@ export function findNewsBySlug(news: NewsArticle[], slug: string): NewsArticle |
   return news.find((p) => toSlug(p.title, p.id) === slug) || news.find((p) => slug.endsWith(p.id));
 }
 
-const API = "http://180.93.52.142:3007"
+import { API_URL as API } from "./config"
 export async function fetchNews(): Promise<NewsArticle[]> {
   try {
     const res = await fetch(`${API}/news`, { cache: "no-store" })

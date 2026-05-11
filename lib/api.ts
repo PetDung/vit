@@ -1,4 +1,4 @@
-const API = "http://180.93.52.142:3007"
+import { API_URL as API } from "./config"
 
 /* ─── Generic CRUD ─── */
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
@@ -97,4 +97,33 @@ export const contactsApi = {
 export const analyticsApi = {
   get: () => request<any>(`${API}/analytics`),
   update: (data: any) => request<any>(`${API}/analytics`, { method: "PUT", body: JSON.stringify(data) }),
+}
+
+/* ─── CNC APIs ─── */
+export const cncApi = {
+  getAll: () => request<any[]>(`${API}/cnc`),
+  get: (id: string) => request<any>(`${API}/cnc/${id}`),
+  create: (data: any) => request<any>(`${API}/cnc`, { method: "POST", body: JSON.stringify(data) }),
+  update: (id: string, data: any) => request<any>(`${API}/cnc/${id}`, { method: "PUT", body: JSON.stringify(data) }),
+  delete: (id: string) => request<void>(`${API}/cnc/${id}`, { method: "DELETE" }),
+}
+
+export const cncHeroApi = {
+  get: () => request<any>(`${API}/cncHero`),
+  update: (data: any) => request<any>(`${API}/cncHero`, { method: "PUT", body: JSON.stringify(data) }),
+}
+
+export const cncAboutApi = {
+  get: () => request<any>(`${API}/cncAbout`),
+  update: (data: any) => request<any>(`${API}/cncAbout`, { method: "PUT", body: JSON.stringify(data) }),
+}
+
+export const cncStatsApi = {
+  getAll: () => request<any[]>(`${API}/cncStats`),
+  update: (id: string, data: any) => request<any>(`${API}/cncStats/${id}`, { method: "PUT", body: JSON.stringify(data) }),
+}
+
+export const cncPartnersApi = {
+  getAll: () => request<any[]>(`${API}/cncPartners`),
+  update: (id: string, data: any) => request<any>(`${API}/cncPartners/${id}`, { method: "PUT", body: JSON.stringify(data) }),
 }

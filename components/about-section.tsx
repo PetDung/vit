@@ -25,8 +25,13 @@ const IconMap: Record<string, any> = {
   Clock
 }
 
+import { usePathname } from "next/navigation"
+import { getThemeFromPath } from "@/lib/theme-config"
+
 export function AboutSection({ initialData }: { initialData?: AboutConfig | null }) {
   const [config, setConfig] = useState<AboutConfig | null>(initialData || null)
+  const pathname = usePathname()
+  const theme = getThemeFromPath(pathname)
 
   useEffect(() => {
     if (initialData && !config) setConfig(initialData)
@@ -44,6 +49,8 @@ export function AboutSection({ initialData }: { initialData?: AboutConfig | null
   ]
 
   const features = config?.features || DEFAULT_FEATURES
+
+  const stripeColor = theme.id === "cnc" ? "#4A9EFF" : "#ffcb05"
 
   return (
     <section id="gioi-thieu" className="py-24 lg:py-32 bg-secondary text-secondary-foreground relative overflow-hidden">
@@ -94,7 +101,7 @@ export function AboutSection({ initialData }: { initialData?: AboutConfig | null
 
           <div className="relative">
             <div className="absolute -top-4 -left-4 right-4 h-2" style={{
-              background: "repeating-linear-gradient(45deg, #ffcb05, #ffcb05 10px, #000 10px, #000 20px)"
+              background: `repeating-linear-gradient(45deg, ${stripeColor}, ${stripeColor} 10px, #000 10px, #000 20px)`
             }} />
 
             <div className="bg-primary p-8 lg:p-10 relative">
@@ -124,3 +131,4 @@ export function AboutSection({ initialData }: { initialData?: AboutConfig | null
     </section>
   )
 }
+

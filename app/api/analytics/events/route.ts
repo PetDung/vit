@@ -44,8 +44,8 @@ export async function GET(request: Request) {
     }) || [];
 
     return NextResponse.json({ events });
-  } catch (error) {
+  } catch (error: any) {
     console.error("Lỗi API Events:", error);
-    return NextResponse.json({ error: 'Lỗi tải dữ liệu' }, { status: 500 });
+    return NextResponse.json({ error: 'Lỗi tải dữ liệu', details: error.message }, { status: 500 });
   }
 }

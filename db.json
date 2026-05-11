@@ -338,5 +338,84 @@
       "isCared": false,
       "note": ""
     }
+  ],
+  "cnc": [
+    {
+      "id": "cnc-001",
+      "name": "CNC LUBE PRO 46",
+      "code": "CNC-LUBE-PRO-46",
+      "category": "Dầu bôi trơn trượt",
+      "description": "<p>Dầu bôi trơn chuyên dụng cho máy CNC, đường dẫn trượt và vít me.</p>",
+      "content": "<p><strong>Mô tả / Description</strong></p><ul><li><p>CNC LUBE PRO 46 là dầu bôi trơn chuyên dụng cho các bề mặt trượt, đường ray và vít me của máy CNC. Được pha chế với phụ gia chống dính, chống mài mòn cao cấp.</p></li></ul><p><strong>Ứng dụng / Application</strong></p><ul><li><p>Máy phay CNC, máy tiện CNC, máy mài CNC và các thiết bị gia công cơ khí chính xác.</p></li></ul>",
+      "image": "https://res.cloudinary.com/ddnasugap/image/upload/v1772440302/marshell/jpiqju2s9ohww27y0ey0.png",
+      "imageUrl": "https://res.cloudinary.com/ddnasugap/image/upload/v1772440302/marshell/jpiqju2s9ohww27y0ey0.png",
+      "images": [],
+      "performance": { "protection": 92, "life": 88, "temperature": 85, "efficiency": 90, "cleanliness": 95 },
+      "featured": true
+    },
+    {
+      "id": "cnc-002",
+      "name": "COOLANT PLUS 10%",
+      "code": "COOLANT-PLUS-10",
+      "category": "Dầu cắt gọt",
+      "description": "<p>Dung dịch cắt gọt bán tổng hợp tỷ lệ pha 10%, làm mát và bôi trơn vượt trội.</p>",
+      "content": "<p><strong>Mô tả / Description</strong></p><ul><li><p>COOLANT PLUS là dung dịch cắt gọt bán tổng hợp chất lượng cao, phù hợp với mọi kim loại: thép, nhôm, gang, đồng. Không chứa clo, an toàn cho người dùng.</p></li></ul><p><strong>Ứng dụng / Application</strong></p><ul><li><p>Dùng cho máy phay, máy tiện, máy khoan, máy mài CNC và bán tự động. Pha loãng với nước theo tỷ lệ 1:10 đến 1:20.</p></li></ul>",
+      "image": "https://res.cloudinary.com/ddnasugap/image/upload/v1772440437/marshell/dpadsxbkegun0yvrxhqa.jpg",
+      "imageUrl": "https://res.cloudinary.com/ddnasugap/image/upload/v1772440437/marshell/dpadsxbkegun0yvrxhqa.jpg",
+      "images": [],
+      "performance": { "protection": 88, "life": 85, "temperature": 95, "efficiency": 92, "cleanliness": 90 },
+      "featured": true
+    },
+    {
+      "id": "cnc-003",
+      "name": "HYDRO CNC 68",
+      "code": "HYDRO-CNC-68",
+      "category": "Dầu thủy lực CNC",
+      "description": "<p>Dầu thủy lực cao cấp ISO VG 68 chuyên dụng cho hệ thống thủy lực máy CNC.</p>",
+      "content": "<p><strong>Mô tả / Description</strong></p><ul><li><p>HYDRO CNC 68 là dầu thủy lực chống mài mòn cấp cao, được tối ưu cho hệ thống thủy lực áp suất cao của máy công cụ CNC.</p></li></ul><p><strong>Ứng dụng / Application</strong></p><ul><li><p>Hệ thống thủy lực máy CNC, trung tâm gia công, máy uốn CNC. Đáp ứng tiêu chuẩn ISO HM/HV, DIN 51524.</p></li></ul>",
+      "image": "https://res.cloudinary.com/ddnasugap/image/upload/v1772440797/marshell/fggxl5f7hntgzaj6jw44.jpg",
+      "imageUrl": "https://res.cloudinary.com/ddnasugap/image/upload/v1772440797/marshell/fggxl5f7hntgzaj6jw44.jpg",
+      "images": [],
+      "performance": { "protection": 95, "life": 90, "temperature": 88, "efficiency": 85, "cleanliness": 92 },
+      "featured": false
+    }
+  ],
+  "cncHero": {
+    "title1": "Dầu bôi trơn",
+    "title2": "Máy CNC",
+    "title3": "Chính xác cao",
+    "experience": "+ 10 Năm Chuyên Dụng CNC",
+    "description": "Giải pháp dầu bôi trơn chuyên nghiệp cho máy CNC, trung tâm gia công và thiết bị cơ khí chính xác tại Việt Nam.",
+    "videoUrl": ""
+  },
+  "cncAbout": {
+    "title1": "Đối tác tin cậy",
+    "title2": "trong ngành dầu CNC",
+    "description1": "Marshell chuyên cung cấp dầu bôi trơn, dầu cắt gọt và dầu thủy lực chuyên dụng cho máy CNC, đáp ứng tiêu chuẩn gia công chính xác cao nhất.",
+    "description2": "Với hơn 10 năm kinh nghiệm trong lĩnh vực dầu CNC, chúng tôi hợp tác với các nhà máy gia công cơ khí, xưởng sản xuất khuôn mẫu và trung tâm gia công hiện đại trên cả nước.",
+    "features": [
+      { "text": "Dầu chuyên dụng cho từng loại máy CNC", "icon": "Cpu" },
+      { "text": "Đội ngũ kỹ thuật tư vấn chuyên sâu", "icon": "Users" },
+      { "text": "Giao hàng nhanh toàn quốc", "icon": "Truck" },
+      { "text": "Cam kết chất lượng quốc tế", "icon": "Shield" },
+      { "text": "Hỗ trợ kỹ thuật 24/7", "icon": "HeadphonesIcon" },
+      { "text": "Bảo hành và đổi trả linh hoạt", "icon": "Clock" }
+    ],
+    "stats": [
+      { "value": "10+", "label": "Năm" },
+      { "value": "300+", "label": "Khách hàng" },
+      { "value": "100%", "label": "Cam kết" }
+    ]
+  },
+  "cncStats": [
+    { "value": 10, "suffix": "+", "label": "Năm kinh nghiệm CNC", "icon": "YRS", "id": "cnc-stat-001" },
+    { "value": 300, "suffix": "+", "label": "Khách hàng tin dùng", "icon": "KH", "id": "cnc-stat-002" },
+    { "value": 100, "suffix": "%", "label": "Nguyên liệu nhập khẩu", "icon": "NK", "id": "cnc-stat-003" },
+    { "value": 24, "suffix": "/7", "label": "Hỗ trợ kỹ thuật", "icon": "HRS", "id": "cnc-stat-004" }
+  ],
+  "cncPartners": [
+    { "name": "Brenntag", "src": "/doi-tac/1952brenntag-logo.png", "id": "cnc-partner-001" },
+    { "name": "Capi", "src": "/doi-tac/2140capi-logo.png", "id": "cnc-partner-002" },
+    { "name": "Lubrizol", "src": "/doi-tac/9426lubrizol-logo.jpg", "id": "cnc-partner-003" }
   ]
 }

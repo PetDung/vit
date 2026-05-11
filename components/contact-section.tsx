@@ -14,6 +14,9 @@ import { toast } from "sonner"
 import Image from "next/image"
 import { sendGAEvent } from '@next/third-parties/google';
 
+import { usePathname } from "next/navigation"
+import { getThemeFromPath } from "@/lib/theme-config"
+
 export function ContactSection({ initialCompany, initialSettings }: { initialCompany?: CompanyInfo, initialSettings?: Settings | null }) {
   const [company, setCompany] = useState<CompanyInfo>(initialCompany || DEFAULT_COMPANY)
   const [settings, setSettings] = useState<Settings | null>(initialSettings || null)
@@ -25,6 +28,8 @@ export function ContactSection({ initialCompany, initialSettings }: { initialCom
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const pathname = usePathname()
+  const theme = getThemeFromPath(pathname)
 
   useEffect(() => {
     if (initialCompany && company === DEFAULT_COMPANY) setCompany(initialCompany)
@@ -78,6 +83,9 @@ export function ContactSection({ initialCompany, initialSettings }: { initialCom
   // Fallback map URL
   const defaultMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59587.97785449778!2d106.0517698!3d21.1780556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31350a3536c10fa9%3A0x72706e93b32d95e2!2zQsaw4buDbmcgQsOtbmgsIFRQLiBCw6FjIG5pbmgsIELhuq9jIE5pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s"
 
+  const gradientClass = theme.id === "cnc" ? "text-primary" : "text-gold-gradient"
+  const glowClass = theme.id === "cnc" ? "blue-glow" : "gold-glow"
+
   return (
     <section id="lien-he" className="py-24 lg:py-32 bg-muted relative overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -108,7 +116,7 @@ export function ContactSection({ initialCompany, initialSettings }: { initialCom
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-foreground uppercase">
             Hãy để chúng tôi
             <br />
-            <span className="text-gold-gradient">tư vấn cho bạn</span>
+            <span className={gradientClass}>tư vấn cho bạn</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Đội ngũ chuyên gia sẵn sàng hỗ trợ bạn 24/7
@@ -121,7 +129,7 @@ export function ContactSection({ initialCompany, initialSettings }: { initialCom
               {contactInfo.map((info) => (
                 <div
                   key={info.label}
-                  className="p-6 bg-card border-2 border-border hover:border-primary transition-all duration-300 group gold-glow"
+                  className={`p-6 bg-card border-2 border-border hover:border-primary transition-all duration-300 group ${glowClass}`}
                 >
                   <div className="w-10 h-10 bg-secondary flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                     <info.icon className="h-5 w-5 text-secondary-foreground group-hover:text-primary-foreground transition-colors" />
@@ -134,7 +142,7 @@ export function ContactSection({ initialCompany, initialSettings }: { initialCom
               ))}
             </div>
 
-            <div className="h-64 bg-card border-2 border-border overflow-hidden relative gold-glow transition-all duration-300">
+            <div className={`h-64 bg-card border-2 border-border overflow-hidden relative ${glowClass} transition-all duration-300`}>
               <iframe
                 src={settings?.mapUrl || defaultMapUrl}
                 width="100%"
@@ -253,3 +261,4 @@ export function ContactSection({ initialCompany, initialSettings }: { initialCom
     </section>
   )
 }
+

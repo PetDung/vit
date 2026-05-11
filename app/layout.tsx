@@ -14,25 +14,43 @@ const robotoCondensed = Roboto_Condensed({
 });
 
 export const metadata: Metadata = {
-    title: 'Marshell - Dầu Nhớt Công Nghiệp Chất Lượng Cao',
-    description: 'Công ty TNHH Thành Lợi Marshell - 15 năm kinh nghiệm cung cấp dầu nhớt, dầu thủy lực chất lượng cao cho động cơ Diesel, xe tải, tàu thuyền tại Việt Nam.',
-    generator: 'v0.app',
+    title: {
+        default: 'Marshell - Dầu Nhớt Công Nghiệp & CNC Chính Hãng',
+        template: '%s | Marshell Vietnam'
+    },
+    description: 'Công ty TNHH Thành Lợi Marshell - 15 năm kinh nghiệm cung cấp giải pháp bôi trơn toàn diện cho động cơ Diesel, máy CNC và thiết bị công nghiệp.',
+    keywords: ['dầu nhớt', 'dầu cnc', 'dầu thủy lực', 'marshell', 'thành lợi marshell', 'dầu cắt gọt', 'dầu bôi trơn'],
+    authors: [{ name: 'Marshell Vietnam' }],
+    viewport: 'width=device-width, initial-scale=1',
+    robots: 'index, follow',
+    openGraph: {
+        type: 'website',
+        locale: 'vi_VN',
+        url: 'https://marshell.vn',
+        siteName: 'Marshell Vietnam',
+        title: 'Marshell - Dầu Nhớt Công Nghiệp Chất Lượng Cao',
+        description: 'Chuyên cung cấp dầu nhớt động cơ, dầu thủy lực và dầu máy CNC nhập khẩu.',
+        images: [
+            {
+                url: '/og-image.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Marshell Vietnam - Dầu Nhớt Công Nghiệp'
+            }
+        ]
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Marshell Vietnam',
+        description: 'Giải pháp bôi trơn công nghiệp hàng đầu.',
+        images: ['/og-image.jpg'],
+    },
     icons: {
         icon: [
-            {
-                url: '/icon-light-32x32.png',
-                media: '(prefers-color-scheme: light)',
-            },
-            {
-                url: '/icon-dark-32x32.png',
-                media: '(prefers-color-scheme: dark)',
-            },
-            {
-                url: '/icon.svg',
-                type: 'image/svg+xml',
-            },
+            { url: '/favicon.ico' },
+            { url: '/icon.png', type: 'image/png' },
         ],
-        apple: '/apple-icon.png',
+        apple: '/apple-touch-icon.png',
     },
 }
 
@@ -42,7 +60,7 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en">
+        <html lang="vi">
             <body className={`${robotoCondensed.variable} font-sans antialiased`}>
                 <SmoothScroll>
                     <SiteShell>

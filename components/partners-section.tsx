@@ -6,8 +6,13 @@ import { Reveal } from "@/components/reveal"
 import { Parallax } from "@/components/parallax"
 import { type Partner } from "@/lib/partners"
 
+import { usePathname } from "next/navigation"
+import { getThemeFromPath } from "@/lib/theme-config"
+
 export function PartnersSection({ initialData }: { initialData?: Partner[] }) {
   const [partners, setPartners] = useState<Partner[]>(initialData || [])
+  const pathname = usePathname()
+  const theme = getThemeFromPath(pathname)
 
   useEffect(() => {
     if (initialData && partners.length === 0) setPartners(initialData)
@@ -15,14 +20,17 @@ export function PartnersSection({ initialData }: { initialData?: Partner[] }) {
 
   if (partners.length === 0) return null
 
+  const gridColor = theme.id === "cnc" ? "#4A9EFF" : "#FFD700"
+  const shadowColor = theme.id === "cnc" ? "rgba(74,158,255,0.2)" : "rgba(255,215,0,0.2)"
+
   return (
     <section className="py-24 bg-background border-y border-white/5 relative overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <Parallax offset={50} className="absolute inset-0 opacity-10 h-[120%] -top-[10%]">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-                linear-gradient(to right, #FFD700 1px, transparent 1px),
-                linear-gradient(to bottom, #FFD700 1px, transparent 1px)
+                linear-gradient(to right, ${gridColor} 1px, transparent 1px),
+                linear-gradient(to bottom, ${gridColor} 1px, transparent 1px)
             `,
             backgroundSize: '40px 40px'
           }} />
@@ -56,7 +64,12 @@ export function PartnersSection({ initialData }: { initialData?: Partner[] }) {
               key={`${partner.name}-${index}`}
               className="mx-8 lg:mx-12 group relative"
             >
-              <div className="relative w-[180px] h-[100px] bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-4 flex items-center justify-center transition-all duration-300 group-hover:border-primary/50 group-hover:bg-white/10 group-hover:shadow-[0_0_20px_rgba(255,215,0,0.2)]">
+              <div 
+                className="relative w-[180px] h-[100px] bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-4 flex items-center justify-center transition-all duration-300 group-hover:border-primary/50 group-hover:bg-white/10"
+                style={{
+                  boxShadow: `0 0 20px ${shadowColor}`
+                }}
+              >
                 <div className="relative w-full h-full transition-all duration-300 group-hover:scale-105">
                   <Image
                     src={partner.src}
@@ -74,3 +87,4 @@ export function PartnersSection({ initialData }: { initialData?: Partner[] }) {
     </section>
   )
 }
+
