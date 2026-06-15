@@ -10,8 +10,6 @@ services:
       - GA4_PROPERTY_ID=${GA4_PROPERTY_ID}
     env_file:
       - .env
-    depends_on:
-      - api
     networks:
       - tiktok_net
 
